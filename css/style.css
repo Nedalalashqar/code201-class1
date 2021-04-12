@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+body {
+    width: 960px;
+    margin:0 auto;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+a:hover {
+    text-align: center;
+}
+
+main p {
+    background-color: brown;
+    color: cornsilk;
+}
+
+footer {
+    text-align: center;
+}
+
