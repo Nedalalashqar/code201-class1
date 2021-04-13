@@ -31,6 +31,11 @@ main p {
     background-color: brown;
     color: cornsilk;
 }
+main ul li  {
+background-color: #bdc7c9;
+font-weight: 300;
+text-align: center;
+}
 
 footer {
     text-align: center;
