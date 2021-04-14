@@ -65,36 +65,59 @@ if (userAnimals==='Yes' && userAnimals==='No'){
   sum ++;
 }
 
-for (let i =0 ; i < 4 ; i++){
-  let num = prompt('What is my favorite number?').toLowerCase();
-  while (num==='5'){
-    alert('Well, this is my favorite number, you are amazing');
-    console.log(num);
-    sum ++;
-  }if (num > 5) {
-    alert('too high');
+let i = 0;
+
+let num = prompt('I want you to guess the secret number that I got in my mind use the number domain between (1 - 100)','1-100' );
+console.log( num );
+
+for( i = 1; i < 4; i++ ){
+  if( num <1 ){
+    num = prompt( 'You entered wrong value, please enter a number between 1 and 100' );
+    console.log( num );
+  } else if ( num >100 ){
+    num = prompt( 'You entered wrong value, please enter a number between 1 and 100' );
+    console.log( num );
+  }else if ( num >= 1 && num <= 25 ) {
+    num = prompt( 'That was too low choise :D' );
+    console.log( num );
+  } else if ( num > 75 && num <= 100 ){
+    num = prompt( 'That was too high choise :D' );
+    console.log( num );
+  } else if ( num > 25 && num < 75 ){
+    num = prompt( 'That was close, but it\'s not right :P' );
+    console.log( num );
+  } else if ( num === '75' ) {
+    alert( 'You are the master of the guessing game ^_^, 75 is the right answer' );
+    counter+=2;
+    break;
   } else {
-    alert('too low');
+    num = prompt( 'not a words not an emojis only numbers please' );
+    console.log( num );
   }
 }
-alert('My favorite number is 5');
 
-let userColor = ['red' + 'black' + 'blue'];
+if( i === 4 && num === '75' ){ alert( 'You are the master of the guessing game ^_^, 75 is the right answer' ); counter+=2; }
+if( num !== '75' ){
+  alert( 'Oobs, You run out of attempts and I beat you in my guessing game :D, the right answer is 75 ' );
+}
 
-for (let i =0 ; i < 6 ; i++){
-  let pasColor = prompt('What are my favorite colors');
-  while (userColor ===pasColor){
-    alert('Well, this is my favorite Color, you are amazing');
-    console.log(pasColor);
-    sum ++;
-  }if (userColor !== pasColor) {
-    alert('too This is not my favorite color');
-  } else {
-    alert('You are getting close to the correct answero low');
+
+
+
+let pasColor = prompt( 'Now I want you to choose my favorite color.  I probably like more than one color.  red, brown, green, black, blossom, blue' ).toLowerCase();
+
+let userColor = [ 'red' + 'black' + 'blue' ];
+for( i = 1; i < 6; i++ ){
+  if( pasColor !== userColor[0] && pasColor !== userColor[1] && pasColor !== userColor[2] ){
+    pasColor = prompt( 'Nop, try again','red, brown, green, black, blossom, blue' ).toLowerCase();
+    console.log( pasColor );
   }
 }
-alert(userColor);
-console.log(userColor);
+
+if( pasColor === userColor[0] || pasColor === userColor[1] || pasColor === userColor[2] ){
+  alert( 'That\'s right, I really like '+userColor[0]+' and '+userColor[1]+' and '+userColor[2]+', They are the best' );
+  counter+=2;
+}
 
 
 alert('Tank you' + ' ' + userName + ' ' + 'to answer the questions');
