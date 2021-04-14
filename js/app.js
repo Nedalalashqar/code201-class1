@@ -11,59 +11,76 @@ alert('Please answer the following questions with yes or no');
 
 
 let userLive = prompt('Do I live in Jordan?').toLowerCase();
-if (userLive==='Yes' && userLive==='No'){
-  alert('Correct answer: Yes, I live in Jordan');
-  console.log(userLive);
-  sum ++;
-}else {
-  alert('Wrong answer, I live in Jordan');
-  console.log(userLive);
-
+function checkLive(userLive){
+  if (userLive==='Yes' && userLive==='No'){
+    alert('Correct answer: Yes, I live in Jordan');
+    console.log(userLive);
+    sum ++;
+  }else {
+    alert('Wrong answer, I live in Jordan');
+    console.log(userLive);
+  
+  }
 }
+checkLive(userLive);
 
 
 let userIcecream = prompt('Do I like ice cream?').toLowerCase();
-if (userIcecream==='Yes' && userIcecream==='No'){
-  alert('Correct answer: Yes, I like ice cream');
-  console.log(userIcecream);
-  sum ++;
-}else {
-  alert('Wrong answer, I like ice cream');
-  console.log(userIcecream);
-
+function cheackIcecream(userIcecream){
+  if (userIcecream==='Yes' && userIcecream==='No'){
+    alert('Correct answer: Yes, I like ice cream');
+    console.log(userIcecream);
+    sum ++;
+  }else {
+    alert('Wrong answer, I like ice cream');
+    console.log(userIcecream);
+  
+  }
+  
 }
-
+cheackIcecream(userIcecream);
 
 let userFlowers = prompt('Do I like flowers?').toLowerCase();
-if (userFlowers==='Yes' && userFlowers==='No'){
-  alert('Correct answer: Yes, I like flowers');
-  console.log(userFlowers);
-  sum ++;
-}else {
-  alert('Wrong answer, I like flowers');
-  console.log(userFlowers);
-
+function cheackUserFlowers(userFlowers){
+  if (userFlowers==='Yes' && userFlowers==='No'){
+    alert('Correct answer: Yes, I like flowers');
+    console.log(userFlowers);
+    sum ++;
+  }else {
+    alert('Wrong answer, I like flowers');
+    console.log(userFlowers);
+  
+  }
 }
 
-let userTv = prompt('Do you like watching TV?').toLowerCase();
-if (userTv==='Yes' && userTv==='No'){
-  alert('Wrong answer, I do not like flowers');
-  console.log(userTv);
-}else {
-  alert('Correct answer: Yes, I do not like watching TV');
-  console.log(userTv);
-  sum ++;
+cheackUserFlowers(userFlowers);
+
+
+let userTv = prompt('Do I like watching TV?').toLowerCase();
+function cheackUserTv(userTv){
+  if (userTv==='Yes' && userTv==='No'){
+    alert('Wrong answer, I do not like flowers');
+    console.log(userTv);
+  }else {
+    alert('Correct answer: Yes, I do not like watching TV');
+    console.log(userTv);
+    sum ++;
+  }
 }
+cheackUserTv(userTv);
 
 let userAnimals = prompt('Do you like animals ?').toLowerCase();
-if (userAnimals==='Yes' && userAnimals==='No'){
-  alert('Wrong answer, I do not like animals');
-  console.log(userAnimals);
-}else {
-  alert('Correct answer: Yes, I do not like animals');
-  console.log(userAnimals);
-  sum ++;
+function cheackUserAnimals(userAnimals){
+  if (userAnimals==='Yes' && userAnimals==='No'){
+    alert('Wrong answer, I do not like animals');
+    console.log(userAnimals);
+  }else {
+    alert('Correct answer: Yes, I do not like animals');
+    console.log(userAnimals);
+    sum ++;
+  }
 }
+
 
 let i = 0;
 
