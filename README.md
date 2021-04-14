@@ -8,3 +8,6 @@
 ***The method of work***
 >I will ask you some questions. You guess what the correct answer is (yes or no)
 > I have added the top ten foods that I like
+
+Navigator : Nedal Alashqar
+Driver :Rawan Alakhras
