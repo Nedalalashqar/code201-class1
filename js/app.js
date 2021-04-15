@@ -5,7 +5,6 @@
 let sum = 0;
 let userName = prompt('What is your name ?');
 alert('Welcome' + ' ' + userName + ' ' + 'to my page');
-console.log(userName);
 
 alert('Please answer the following questions with yes or no');
 
@@ -18,7 +17,6 @@ function checkLive(userLive){
     sum ++;
   }else {
     alert('Wrong answer, I live in Jordan');
-    console.log(userLive);
 
   }
 }
@@ -33,7 +31,6 @@ function cheackIcecream(userIcecream){
     sum ++;
   }else {
     alert('Wrong answer, I like ice cream');
-    console.log(userIcecream);
 
   }
 
@@ -49,7 +46,6 @@ function cheackUserFlowers(userFlowers){
     sum ++;
   }else {
     alert('Wrong answer, I like flowers');
-    console.log(userFlowers);
 
   }
 }
@@ -65,7 +61,6 @@ function cheackUserTv(userTv){
     console.log(userTv);
   }else {
     alert('Correct answer: Yes, I do not like watching TV');
-    console.log(userTv);
     sum ++;
   }
 }
@@ -78,7 +73,6 @@ function cheackUserAnimals(userAnimals){
     console.log(userAnimals);
   }else {
     alert('Correct answer: Yes, I do not like animals');
-    console.log(userAnimals);
     sum ++;
   }
 }
@@ -116,7 +110,6 @@ function fun6() {
 
   }
 
-  console.log(scour);
   return(scour);
 
 
@@ -136,7 +129,7 @@ function guessColor() {
       break;
     }
   }
-  console.log(scour);
+
   return(scour);
 }
 guessColor();
