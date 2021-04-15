@@ -19,7 +19,7 @@ function checkLive(userLive){
   }else {
     alert('Wrong answer, I live in Jordan');
     console.log(userLive);
-  
+
   }
 }
 checkLive(userLive);
@@ -34,11 +34,12 @@ function cheackIcecream(userIcecream){
   }else {
     alert('Wrong answer, I like ice cream');
     console.log(userIcecream);
-  
+
   }
-  
+
 }
 cheackIcecream(userIcecream);
+
 
 let userFlowers = prompt('Do I like flowers?').toLowerCase();
 function cheackUserFlowers(userFlowers){
@@ -49,9 +50,10 @@ function cheackUserFlowers(userFlowers){
   }else {
     alert('Wrong answer, I like flowers');
     console.log(userFlowers);
-  
+
   }
 }
+
 
 cheackUserFlowers(userFlowers);
 
@@ -82,61 +84,64 @@ function cheackUserAnimals(userAnimals){
 }
 
 
-let i = 0;
 
-let num = prompt('I want you to guess the secret number that I got in my mind use the number domain between (1 - 100)','1-100' );
-console.log( num );
 
-for( i = 1; i < 4; i++ ){
-  if( num <1 ){
-    num = prompt( 'You entered wrong value, please enter a number between 1 and 100' );
-    console.log( num );
-  } else if ( num >100 ){
-    num = prompt( 'You entered wrong value, please enter a number between 1 and 100' );
-    console.log( num );
-  }else if ( num >= 1 && num <= 25 ) {
-    num = prompt( 'That was too low choise :D' );
-    console.log( num );
-  } else if ( num > 75 && num <= 100 ){
-    num = prompt( 'That was too high choise :D' );
-    console.log( num );
-  } else if ( num > 25 && num < 75 ){
-    num = prompt( 'That was close, but it\'s not right :P' );
-    console.log( num );
-  } else if ( num === '75' ) {
-    alert( 'You are the master of the guessing game ^_^, 75 is the right answer' );
-    counter+=2;
-    break;
-  } else {
-    num = prompt( 'not a words not an emojis only numbers please' );
-    console.log( num );
+
+function fun6() {
+  alert('lets play another game, guessing a number game, Good luck');
+
+
+  let number = 20;
+
+  for (let i = 1; i <= 4; i++) {
+
+    let guessingnum = prompt('guess anumber between 0 and 50');
+    if (guessingnum < number) {
+      alert('to low');
+
+    }
+
+    else if (guessingnum > number) {
+      alert('to hight');
+
+    }
+    else if (guessingnum === 20) {
+
+      alert('great, it\'s true.');
+      scour++;
+      break;
+
+
+    }
+
   }
+
+  console.log(scour);
+  return(scour);
+
+
 }
-
-if( i === 4 && num === '75' ){ alert( 'You are the master of the guessing game ^_^, 75 is the right answer' ); counter+=2; }
-if( num !== '75' ){
-  alert( 'Oobs, You run out of attempts and I beat you in my guessing game :D, the right answer is 75 ' );
-}
+fun6();
 
 
 
-
-let pasColor = prompt( 'Now I want you to choose my favorite color.  I probably like more than one color.  red, brown, green, black, blossom, blue' ).toLowerCase();
-
-let userColor = [ 'red' + 'black' + 'blue' ];
-for( i = 1; i < 6; i++ ){
-  if( pasColor !== userColor[0] && pasColor !== userColor[1] && pasColor !== userColor[2] ){
-    pasColor = prompt( 'Nop, try again','red, brown, green, black, blossom, blue' ).toLowerCase();
-    console.log( pasColor );
+function guessColor() {
+  alert('One last game, you have 6 attempts to choose the correct favorite color from list of colors');
+  for (let i = 0; i < 6; i++) {
+    const colorArr = ['red', 'green', 'blue', 'yellow', 'gray', 'white', 'brown', 'skyBlue', 'black', 'orange', 'purple', 'pink', 'maroon', 'gold', 'bronze', 'silver'];
+    let answer = prompt(`you have ${6 - i} attempts: \n select a color from the list.\n which one is my favorite color?\n ${colorArr.join(' - ')}`).toLowerCase();
+    if (answer === colorArr[7]) {
+      alert('great, it\'s true, you won');
+      scour++;
+      break;
+    }
   }
+  console.log(scour);
+  return(scour);
 }
+guessColor();
 
-if( pasColor === userColor[0] || pasColor === userColor[1] || pasColor === userColor[2] ){
-  alert( 'That\'s right, I really like '+userColor[0]+' and '+userColor[1]+' and '+userColor[2]+', They are the best' );
-  counter+=2;
-}
 
 
 alert('Tank you' + ' ' + userName + ' ' + 'to answer the questions');
-
 alert('The number of correct answers' + ' ' + sum);
