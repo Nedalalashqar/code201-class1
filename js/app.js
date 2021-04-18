@@ -81,40 +81,28 @@ function cheackUserAnimals(userAnimals){
 
 
 
-function fun6() {
-  alert('lets play another game, guessing a number game, Good luck');
-
-
-  let number = 20;
-
-  for (let i = 1; i <= 4; i++) {
-
-    let guessingnum = prompt('guess anumber between 0 and 50');
-    if (guessingnum < number) {
-      alert('to low');
-
-    }
-
-    else if (guessingnum > number) {
-      alert('to hight');
-
-    }
-    else if (guessingnum === 20) {
-
-      alert('great, it\'s true.');
-      scour++;
-      break;
-
-
-    }
-
+alert('Welcome '+userName +' we will play guessing game' );
+//console.log("Welcome "+userName +" we will play guessing game" );
+let num = Math.floor(Math.random() * 10);
+let arr =[0,1,2,3,4,5,6,7,8,9];
+let userInput=prompt('plz enter guessing number to start game you have 4 chance');
+let opportunities =4;
+while(userInput !== num && opportunities >0 ){
+  if(userInput > num){
+    alert('too high');
   }
-
-  return(scour);
-
-
+  else{
+    alert('too low');
+  }
+  userInput = prompt('enter another number');
+  opportunities --;
 }
-fun6();
+if (userInput !== num){
+  alert('it is correct! good job ');
+  score++;
+}else{
+  alert('sorry you lose the correct answere is '+num);
+}
 
 
 
